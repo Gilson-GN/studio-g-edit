@@ -286,6 +286,28 @@
     font-family:'JetBrains Mono',monospace;
   }
 
+  /* DESIGN / CONVITES */
+  .design-cards{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .design-card{
+    position:relative;
+    border:1px solid var(--line); border-radius:4px;
+    overflow:hidden;
+    aspect-ratio:9/14;
+    background:var(--bg-elev);
+  }
+  .design-card img{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    object-fit:cover;
+  }
+  .design-card .who{
+    position:absolute; left:0; right:0; bottom:0;
+    padding:14px 16px;
+    background:linear-gradient(180deg, transparent, rgba(0,0,0,0.85));
+    font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.04em; text-transform:uppercase;
+    color:#f5f3ee;
+  }
+
   /* OFERTA / COMO FUNCIONA */
   .steps{margin-top:48px; display:grid; grid-template-columns:repeat(4,1fr); gap:0;}
   .step{
@@ -349,6 +371,7 @@
     .step{border-left:none; padding-left:0;}
     .strip{grid-template-columns:1fr;}
     .testimonials{grid-template-columns:1fr;}
+    .design-cards{grid-template-columns:1fr;}
     .proof-stats{gap:36px;}
   }
   @media (max-width:520px){
@@ -369,6 +392,7 @@
       <div class="navlinks">
         <a href="#solucao">Processo</a>
         <a href="#prova">Trabalhos</a>
+        <a href="#design">Design</a>
         <a href="#faq">Perguntas</a>
       </div>
       <a href="#contato" class="btn btn-primary">Pedir orçamento</a>
@@ -481,6 +505,27 @@
         <video src="assets/canal-roupas.mp4" autoplay muted loop playsinline></video>
         <div class="sound-btn" data-sound="off">🔇</div>
         <div class="who">Canal de conteúdo · virou marca de roupas</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="design">
+  <div class="wrap">
+    <div class="eyebrow">00:48 <span class="sep">/</span> design & convites</div>
+    <h2>Artes que também fazem parte do processo.</h2>
+    <div class="design-cards">
+      <div class="design-card">
+        <img src="assets/convite-casamento-floral.png" alt="Convite de casamento floral">
+        <div class="who">Convite de casamento · floral</div>
+      </div>
+      <div class="design-card">
+        <img src="assets/convite-casamento-je.png" alt="Convite de casamento Everton e Josicleide">
+        <div class="who">Convite de casamento · save the date</div>
+      </div>
+      <div class="design-card">
+        <img src="assets/convite-aniversario-futebol.png" alt="Convite de aniversário infantil futebol">
+        <div class="who">Convite de aniversário · infantil</div>
       </div>
     </div>
   </div>
